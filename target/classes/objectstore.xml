@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<os:object-store name="store" doc:name="Object store" doc:id="1e7572bf-4c10-4d91-913e-0b129f561831" />
 	<os:object-store name="pranav" doc:name="Object store" doc:id="fc94bac1-c647-4103-b6d0-fbc63288fc19" />
 	<flow name="static" doc:id="8f65d818-6a7e-4440-9b14-37b34c99ecf3" >
-		<http:listener doc:name="Listener" doc:id="165440d0-e69d-4fe2-a9c1-d0f5371fb6db" config-ref="HTTP_Listener_config" path="/os"/>
+		<http:listener doc:name="Listener" doc:id="165440d0-e69d-4fe2-a9c1-d0f5371fb6db" config-ref="HTTP_Listener_config" path="/oss"/>
 		<foreach doc:name="For Each" doc:id="d9d05ad2-83e0-4b5a-9fd3-5ab02d061a3a" >
 			<os:store doc:name="Store" doc:id="211fb97a-955d-4b19-8caa-c30cd28010d1" key="#[payload.id]" objectStore="pranav">
 			<os:value><![CDATA[#[payload.name]]]></os:value>
